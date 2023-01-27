@@ -3,9 +3,62 @@
     padding: 0;
     margin: 0;
 }
+body{
+    scroll-behavior: smooth;
+}
+@font-face {
+    font-family: myFlare;
+    src: url("Flare-Regular.woff");
+}
+@font-face {
+    font-family: myKusangi;
+    src: url('Kusanagi.otf');
+}
+@font-face {
+    font-family: myZeroHour;
+    src: url('ZeroHour.otf');
+}
+/* //animations */
+/* from onmet old */
+.story-indicator {
+    position: relative;
+    padding-left: 10px;
+}
+
+.story-indicator::after {
+    content: '';
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    left: 10px;
+    bottom: 1px;
+    background: #00cc99;
+    animation: indicator 4.3s linear infinite;
+}
+@keyframes indicator {
+    0% {
+        width: 0%;
+        left: 0px;
+    }
+    8.5% {
+        width: 50%;
+    }
+    17% {
+        width: 100%;
+        left: 1px;
+    }
+    25% {
+        width: 50%;
+        left: calc(50% - 1px);
+    }
+    34%,100% {
+        width: 00%;
+        left: calc(100% - 1px);
+    }
+}
 /* ////my scroller */
 .my-scroller::-webkit-scrollbar {
-    width: 8px;
+    width: 0px;
     padding-right: 3px;
     margin-right: 3px;
 }
@@ -16,7 +69,7 @@
 }
 
 .my-scroller::-webkit-scrollbar-thumb {
-    background: rgb(90, 133, 252);
+    background: rgb(0, 68, 255);
     border-radius: 50px;
     box-shadow: 3px 3px 30px rgba(90, 133, 250, 0.0.77);
 }
@@ -25,8 +78,8 @@
     width: 100vw;
     background: transparent;
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 8fr 1fr;
+    grid-template-columns: 1fr 6.4fr;
+    grid-template-rows: 2fr 7fr 1fr;
 }
 #inSidebar{
     height: 100%;
@@ -55,7 +108,7 @@
     border-radius: 9px;
     color: rgb(90, 133, 252);
     text-shadow: 2px 3px 30px rgb(90, 133, 252);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: myFlare;
     line-height: 1;
     font-weight: 600 ;
     display: flex;
@@ -100,10 +153,7 @@
     justify-self: center;
 
 }
-main#content{
-    overflow-x: hidden;
-    overflow-y: auto;
-}
+
 section#mainBG{
     position: relative;
     height: 100%;
@@ -122,8 +172,17 @@ div.firstTextBox{
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 100%;
+    height: clamp(100px, 40vh,600px);
     transform: translate(-50%,-50%);
     z-index: 1;
+    color: white;
+    text-shadow: 2px 2px 20px #ccc;
+    display: flex;
+    background: rgba(0,0,0,0.41);
+    align-items: center;
+    justify-content: center;
+    padding: 10px 4xp;
 }
 .left{
     display: block;
@@ -131,26 +190,59 @@ div.firstTextBox{
 .left h2{
     font-size: 3.4em;
     font-weight: 100;
+    font-family: myFlare;
 }
 .left h1{
-    font-size: 3.4em;
+    font-size: 2.54rem;
     font-weight: 900;    
+    font-family: myKusangi;
+    background: linear-gradient(rgba(20,20,20,0.6),rgba(30,30,30,0.9));
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding: auto;
+    
 }
-.right p{
+.right {
+    font-family: myZeroHour;
+    /* font-family: myFlare; */
+    /* font-family: myKusangi; */
     font-size: 1.3em;
 }
-/* @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
-  #blurLayout {
-    -webkit-backdrop-filter: blur(100px);
-    backdrop-filter: blur(100px);
-  }
-} */
+
+/* #second part */
+#second {
+    background: #090909;
+    height: 70vh;
+    padding-top: 20vh;
+}
+#second .container {
+    /* margin-top:40vh; */
+}
+#second .container h1 {
+    font-size: 3.9em;
+    font-weight: 560;
+    color: gold;
+    padding: 30px;
+    font-family: myZeroHour;
+}
+#second .container p{
+    font-size: 24px;
+    color: rgba(240,240,240,0.8);
+    text-align: justify;
+    padding: 2px 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 @media (min-width: 768px) {
     /* //laptop, tablet */
     .l-hide {
         display: none;
     }
     /* /sidebar  */
+    #sidebar.first {
+        grid-area: 1/1/2/2;
+        overflow: hidden;
+    }
     #sidebar {
         grid-area: 1/1/4/2;
     }
@@ -159,6 +251,10 @@ div.firstTextBox{
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 4fr;
     }
+    .first .logo {
+        margin-bottom: 200px;
+        transition: all 0.1s ease-in-out;
+    }
     .logo{
         max-width: 100%;
         grid-area: 1/1/2/2;
@@ -166,11 +262,12 @@ div.firstTextBox{
     .logo figure {
         height: 100%;
         width: 100%;
+        display: flex;
     }
     .logo figure img {
     height: 100%; 
     object-fit: contain;
-    transform: translateX(50%);
+    margin: auto;
     }
     .link.con{
         display: flex;
@@ -179,15 +276,48 @@ div.firstTextBox{
         /* justify-content: center; */
     }
     /* //main content */
+    .first + main#content{
+        grid-area: 1/1/4/3;
+    }
     main#content{
         grid-area: 1/2/4/3;
         background: #fcfcfc;
+        overflow-y: auto;
+    }
+    .left{
+        position: relative;
+    }
+    .left::after{
+        content: '';
+        height: 100%;
+        position: absolute;
+        width: auto !important;
+        top: 0 !important;
+        left: 100%;
+        background: url('logo.png');
+    }
+    .right{
+        width: 40%;
+        margin-left: 5%;
+        position: relative;
+    }
+    .right::before{
+        content: '';
+        position: absolute;
+        height: 190%;
+        width: 5px;
+        border-radius: 1px;
+        background: #00cc99;
+        top: -45%;
+        left: -10px;
     }
 }
 @media (max-width: 768px) {
     /* //mobile */
      #sidebar {
         grid-area: 3/1/4/-1;
+    }#justforview{
+        display: block;
     }
     .logo{
         height:100%;
@@ -205,12 +335,14 @@ div.firstTextBox{
         display: relative;
         width: 100vw;
         flex-direction: column;
+        background: transparent;
+        backdrop-filter: blur(50px);
         transition: all 0.2s ease-in-out;
     }
     .link.item.div{
         display: inline-block;
         width: 96%;
-        margin: 1px 2%;
+        margin: 6px 2%;
     }
     .conted{
         display: flex;
@@ -270,13 +402,34 @@ div.firstTextBox{
         transform: translateY(-150%);
         position: fixed;
         background: #000;
-        box-shadow: 10px 10px 70px 170px #111;
+        box-shadow: 10px 10px 80px 197px #111;
         z-index: 10;
     }
 
     /* //main content */
     main#content{
         grid-area: 1/1/3/-1;
-        z-index: -1;
+        overflow-y: auto;
+        /* z-index: -1\;here we hade issue so solved it by js */
+    }
+    div.firstTextBox{
+        height: 100%;
+        width: 360px;
+        flex-direction: column;
+    }
+    div.firstTextBox>div{
+        margin: 5px 10px!important;
+    }
+    #second{
+        padding-top: 4vh;
+        height: auto;
+        padding-bottom: 10px;
+    }
+    #second .container h1 {
+        font-size: 32px;
+    }
+    #second .container p{
+        font-size: 15px;
+        color: rgba(240,240,240,0.7)
     }
 }

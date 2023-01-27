@@ -11,7 +11,7 @@
 </head>
 <body>
     <div id="fixer">
-    <section id="sidebar">
+    <section id="sidebar" class="first"> 
         <div id="inSidebar">
             <div id="blurLayout">
                 <div class="logo">
@@ -60,13 +60,20 @@
         <section id="mainBG">
             <img src="mainBG_hero.png"/>
             <div class="firstTextBox">
+                <div style="heighgt:100%"><img src="logo.png" id="justforview" style="height:150px;object-fit:cover; margin-right:20px;"></div>
                 <div class="left">
                     <h2>Explore the</h2>
-                    <h1>Tesseract</h1>
+                    <h1 class="story-indicator">Tesseract</h1>
                 </div>
-                <div class="right">
+                <div class="right" id="mainRight">
                     <p>The annual Science and Technical Fest of PDEU</p>
                 </div>
+            </div>
+        </section>
+        <section id="second">
+            <div class="container">
+                <h1>Great start of 2023</h1>
+                <p>Tesseract, the annual Science and Technical Fest of PDEU, is one of Gujarat's biggest technical college fests. Tesseract provides a platform for tech nerds from colleges such as Pandit Deendayal Energy University and many others to interact, share and celebrate aspirations, creativity, and innovations. It attracts over 6,000 people each year and gives all the students who attend a platform to network and learn about cutting-edge developments in the areas of science and technology.</p>
             </div>
         </section>
     </main>
@@ -87,14 +94,39 @@
         let switchcase = false;
         function myswitch(){
             if(switchcase){
+                //closing
                 document.getElementById('switchCon').classList.remove('on');
                 document.getElementById('linkCon').classList.remove('up')
+                document.getElementById('content').style.zIndex = 2;
                 switchcase = !switchcase;
             }else{
+                //opening
                 document.getElementById('switchCon').classList.add('on');
                 document.getElementById('linkCon').classList.add('up');
                 switchcase = !switchcase;
+                document.getElementById('content').style.zIndex = -1;
             }
+        }
+        // scrolling effect
+        var frBox = document.getElementById("content");
+        document.getElementById('justforview').style.display = 'block';
+        document.getElementById("mainRight").style.marginLeft = "50px";
+        // frBox.style.position = "fixed";
+        frBox.onscroll = function() {myFunction(frBox)};
+        function myFunction(elem) {
+            let num = elem.scrollTop;
+            var h = window.innerHeight;
+            let powerPLus = frBox.offsetHeight*0.05;
+            let limit = frBox.offsetHeight*0.6;
+            var multiplyer = (num*1.258) / limit;
+            if (num > 3 && multiplyer < 0.7) {
+                document.getElementById('justforview').style.display = 'block';
+                document.getElementById("sidebar").classList.add("first");
+                document.getElementById("mainRight").style.marginLeft =  (powerPLus + (limit * multiplyer) )+ "px";
+            }else if(multiplyer >=0.71){
+                document.getElementById("sidebar").classList.remove("first");
+                document.getElementById('justforview').style.display = 'none';
+            }        
         }
     </script>
 </body>
