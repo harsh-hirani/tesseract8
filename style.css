@@ -6,6 +6,9 @@
 body{
     scroll-behavior: smooth;
 }
+.capitalize{
+    text-transform: capitalize;
+}
 @font-face {
     font-family: myFlare;
     src: url("Flare-Regular.woff");
@@ -99,10 +102,10 @@ body{
     /* backdrop-filter: blur(100px); */
   border-radius: 6px;
 }
-.link.item.div{
+.link.item.div,.myBtnDEF{
     height: clamp(20px,auto,200px);
     padding: 8px;
-    width: 92%;
+    width: clamp(100px,92%,300px);
     margin: 3px auto;
     background: linear-gradient(#202020 30%,#101010);
     border-radius: 9px;
@@ -120,7 +123,7 @@ body{
 .link.item.div img {
     transform: scale(0.68);
 }
-.link.item.div:hover{
+.link.item.div:hover,.myBtnDEF:hover{
     transform: scale(1.02);
     background: linear-gradient(#202020 8%,#101010);
 }
@@ -153,7 +156,10 @@ body{
     justify-self: center;
 
 }
-
+#content{
+    background: #090909;
+    overflow-y: auto;
+}
 section#mainBG{
     position: relative;
     height: 100%;
@@ -212,31 +218,60 @@ div.firstTextBox{
 /* #second part */
 #second {
     background: #090909;
-    height: 70vh;
-    padding-top: 20vh;
+    height: auto;
+    padding-top: 15vh;
+    margin-bottom: 20vh;
 }
-#second .container {
-    /* margin-top:40vh; */
+/* #second .container {
+    /* margin-top:40vh; * /
+} */
+.title.gold{
+    color: gold;
+    text-shadow: 2px 2px 30px gold;
 }
-#second .container h1 {
+.title{ 
     font-size: 3.9em;
     font-weight: 560;
-    color: gold;
     padding: 30px;
     font-family: myZeroHour;
 }
-#second .container p{
+p.text{
     font-size: 24px;
     color: rgba(240,240,240,0.8);
     text-align: justify;
     padding: 2px 30px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
+/* gallery part */
+#gallery{
+    position: relative;
+    background: #090909;
+}
+.green.title{
+    color: #00cc99;
+    text-shadow: 2px 2px 20px #00cc99;
+}
+#galleryBinder{
+    position: relative;
+    width: 80%;
+    height: auto;
+    backdrop-filter: blur(100px);
+    display: block;
+    margin: 10px auto;
+}
+#event{
+    margin-bottom: 100vh;
+}
+#shed{
+    margin-bottom: 100vh;
+}
+#about{
+    margin-bottom: 100vh;
+}
 @media (min-width: 768px) {
     /* //laptop, tablet */
     .l-hide {
-        display: none;
+        display: none !important;
     }
     /* /sidebar  */
     #sidebar.first {
@@ -281,7 +316,6 @@ div.firstTextBox{
     }
     main#content{
         grid-area: 1/2/4/3;
-        background: #fcfcfc;
         overflow-y: auto;
     }
     .left{
@@ -310,6 +344,36 @@ div.firstTextBox{
         background: #00cc99;
         top: -45%;
         left: -10px;
+    }
+    /* //gallery */
+    
+    #galleryChange{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem
+    }
+    #galleryChange .myRows{
+        display: flex;
+        height: 20rem;
+        gap: 1rem
+    }
+    #galleryChange .myRows > div.myCols{
+        transition: all 0.4s cubic-bezier(0.25,0.4,0.45,1.4); 
+    }
+    #galleryChange .myRows > div.myCols img{
+        flex: 1;
+        border-radius: 1rem;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+        transition: all 0.4s cubic-bezier(0.25,0.4,0.45,1.4); 
+    }
+    #galleryChange .myRows > div.myCols:hover{
+        width: 100%;
+    }
+    #galleryChange .myRows > div.myCols:hover img{
+        object-fit: contain;
     }
 }
 @media (max-width: 768px) {
@@ -421,15 +485,46 @@ div.firstTextBox{
         margin: 5px 10px!important;
     }
     #second{
-        padding-top: 4vh;
+        padding-top: 15vh;
         height: auto;
         padding-bottom: 10px;
+        margin-bottom: 8vh;
     }
-    #second .container h1 {
+    .title {
         font-size: 32px;
     }
-    #second .container p{
+    .text{
         font-size: 15px;
         color: rgba(240,240,240,0.7)
+    }
+    /* //gallery */
+    #galleryChange{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    #galleryChange .myRows{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem
+    }
+    #galleryChange .myRows > div.myCols{
+        transition: all 0.4s cubic-bezier(0.25,0.4,0.45,1.4); 
+        height: 4rem;
+    }
+    #galleryChange .myRows > div.myCols img{
+        border-radius: 1rem;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 1;
+        transition: all 0.4s cubic-bezier(0.25,0.4,0.45,1.4); 
+    }
+    #galleryChange .myRows > div.myCols:hover{
+        width: 100%;
+        height: 33vh;
+    }
+    #galleryChange .myRows > div.myCols:hover img{
+        object-fit: contain;
     }
 }
