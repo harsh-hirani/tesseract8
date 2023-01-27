@@ -23,7 +23,7 @@
 #fixer{
     height: 100vh;
     width: 100vw;
-    background: #3c3c3c;
+    background: transparent;
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 8fr 1fr;
@@ -32,7 +32,7 @@
     height: 100%;
     width: 100%;
     background: #000;
-    border-radius: 6px;
+    border-radius: 1px;
     /* margin: 3.1% 2%; */
     position: relative;
 }
@@ -43,7 +43,7 @@
     height: 100%;
     width: 100%;
     /* background: rgba(0,0,0,0.8); */
-    backdrop-filter: blur(100px);
+    /* backdrop-filter: blur(100px); */
   border-radius: 6px;
 }
 .link.item.div{
@@ -110,6 +110,7 @@ section#mainBG{
     width: 100%;
     top: 0;
     left: 0;
+    z-index: 1;
 }
 section#mainBG>img{
     width: 100%;
@@ -122,6 +123,7 @@ div.firstTextBox{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    z-index: 1;
 }
 .left{
     display: block;
@@ -137,12 +139,12 @@ div.firstTextBox{
 .right p{
     font-size: 1.3em;
 }
-@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+/* @supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
   #blurLayout {
     -webkit-backdrop-filter: blur(100px);
     backdrop-filter: blur(100px);
   }
-}
+} */
 @media (min-width: 768px) {
     /* //laptop, tablet */
     .l-hide {
@@ -266,6 +268,7 @@ div.firstTextBox{
 
     #linkCon.up{
         transform: translateY(-150%);
+        position: fixed;
         background: #000;
         box-shadow: 10px 10px 70px 170px #111;
         z-index: 10;
@@ -274,5 +277,6 @@ div.firstTextBox{
     /* //main content */
     main#content{
         grid-area: 1/1/3/-1;
+        z-index: -1;
     }
 }

@@ -7,7 +7,7 @@
     <style type="text/css">
     <?php include 'style.css';?>
     </style>
-    <title>Document</title>    
+    <title>Tesseract 8| Home</title>    
 </head>
 <body>
     <div id="fixer">
@@ -71,7 +71,7 @@
         </section>
     </main>
     </div>
-    <script src="http://localhost/globle/JQ/jquery-3.6.0.js"></script>
+    <script src="jquery-3.6.0.min.js"></script>
  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" crossorigin="anonymous"></script> -->
     <script>;
         $('.item').click(function(e) {
