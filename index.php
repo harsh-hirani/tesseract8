@@ -102,7 +102,7 @@
 
         <div class="wrapper">
   <div class="cols" id="eventCols">
-			<div class="col" ontouchstart="this.classList.toggle('hover');">
+			<!--<div class="col" ontouchstart="this.classList.toggle('hover');">
 				<div class="container">
 					<div class="front" style="background-image: url(https://drive.google.com/uc?id=1LzpLxi-WZDKy6iOUKCspDY9_I_tw2xIe)">
 						<div class="inner">
@@ -171,7 +171,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div>-->
 			<div class="col" ontouchstart="this.classList.toggle('hover');">
 				<div class="container">
 					<div class="front" style="background-image: url(https://drive.google.com/uc?id=1Ntsj3YuOpLQRgorTcolHsFhMbkYAyxra)">
@@ -282,8 +282,54 @@
                 document.getElementById('justforview').classList.add("l-hide");// = 'none';
             }        
         }
+        // events by js
+        $eventData = [
+            [
+                'BEHIND THE SCENES WITH MATHEMATICS',
+                'SOM','4 to 7 : C 004'
+            ],
+            [
+                'Valorant Tournament (Online)',
+                'Respawn','5 to 8 : D 003'
+            ],
+            [
+                'Astro Hunt',
+                'Brahmand','3 to 6 : D 008'
+            ],
+            [
+                'Quizzance with Mind Ripple',
+                'Mind-Ripple/Bulls&Bears','4 to 7 : C 002'
+            ],[
+                'FIFA Tournament',
+                'Respawn','5 to 8 : D 004'
+            ],[
+                'Rocket Making workshop',
+                'Brahmand x Nucleus x Apogee3','12 to 4 PM : D 204'
+            ]
+        ];
 
-        ///lazy loading
+        var eventHTML = '';
+        /*for (i=0;i<$eventData.length;i++){
+            eventHTML += "<div class="col" ontouchstart="this.classList.toggle('hover');">";
+				<div class="container">
+					<div class="front" style="background-image: url(https://drive.google.com/uc?id=1Ntsj3YuOpLQRgorTcolHsFhMbkYAyxra)">
+						<div class="inner">
+							<p>Brahmand x Nucleus x Apogee3</p>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p >Brahmand x Nucleus x Apogee</p>
+                            <span style="color: gold;">Rocket Making Workshop</span>
+                            <p> 12 to 4 pm : D 204</p>
+                            <a href="#" class="myBtnDEF">Register</a>
+						</div>
+					</div>
+				</div>
+			</div>
+        }
+        document.getElementById('eventCols').innerHTML = eventHTML;
+        *////lazy loading
   var lazyloadImages = document.querySelectorAll("img.lazy");       
     
     function loading() {
