@@ -125,18 +125,6 @@
             $('.item').removeClass('active');
             mainNavLinks[i].classList.add("active");
         }
-       // document.getElementById("content").addEventListener("scroll", event => {
-        //    let fromTop = window.scrollY;
-                /*if($("#second").is(":visible")) {changer(0);
-                }else*/
-                // if($("#about").is(":visible")) {changer(5);
-                 //}else if($("#shed").is(":visible")) {changer(4);
-                 //}else if($("#event").is(":visible")) {changer(3);
-                 //}else if($("#gallery").is(":visible")) {changer(2);
-                //}else if($("#edm").is(":visible")) {changer(1);
-                //}else if($("#mainBG").is(":visible")) {changer(0);
-        //        }
-    //});
         $.fn.isInViewport = function() {
             var elementTop = $(this).offset().top;
             var elementBottom = elementTop + $(this).outerHeight();
