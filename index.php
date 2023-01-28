@@ -81,7 +81,10 @@
 
         <!-- edm -->
         <section id="edm" data-key="1">
-            <div class="mix title">EDM</div>
+            <div class="container">
+                <h1 class="neon">E</h1>
+                <h1 class="flux">DM</h1>
+            </div>
         </section>
         <!-- gallery -->
         <section id="gallery" data-key="2">
@@ -96,6 +99,100 @@
         </section>
         <section id="event" data-key="3">
         <div class="gold title"> Events </div>
+
+        <div class="wrapper">
+  <div class="cols" id="eventCols">
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front" style="background-image: url(https://drive.google.com/uc?id=1LzpLxi-WZDKy6iOUKCspDY9_I_tw2xIe)">
+						<div class="inner">
+                            <p>SoM</p>
+                        </div>
+					</div>
+					<div class="back">
+						<div class="inner">
+						  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front" style="background-image: url(https://drive.google.com/uc?id=1ANwiBRNWIIknOu7wx_RaQ_Nw7gwavLcY)">
+						<div class="inner">
+							<p>Respawn</p>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front" style="background-image: url(https://drive.google.com/uc?id=1L-6oBZMBKx2t3ZwP68TOqoKwZGeEbYUj)">
+						<div class="inner">
+							<p>Brahmand</p>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front" style="background-image: url(https://drive.google.com/uc?id=1dwAklwYHiyLPvvDACOtBjtmTrsUxysMi">
+						<div class="inner">
+							<p>Mind-Ripple/Bulls&Bears</p>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front" style="background-image: url(https://drive.google.com/uc?id=1NRLhyw1GxfX7MffeStms6gt2mAQ-p56C)">
+						<div class="inner">
+							<p>Respawn</p>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col" ontouchstart="this.classList.toggle('hover');">
+				<div class="container">
+					<div class="front" style="background-image: url(https://drive.google.com/uc?id=1Ntsj3YuOpLQRgorTcolHsFhMbkYAyxra)">
+						<div class="inner">
+							<p>Brahmand x Nucleus x Apogee3</p>
+						</div>
+					</div>
+					<div class="back">
+						<div class="inner">
+							<p >Brahmand x Nucleus x Apogee</p>
+                            <span style="color: gold;">Rocket Making Workshop</span>
+                            <p> 12 to 4 pm : D 204</p>
+                            <a href="#" class="myBtnDEF">Register</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+ </div>
+
+
         </section>
         <section id="shed" data-key="4">
         <div class="green title"> Scheduls </div>
