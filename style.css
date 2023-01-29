@@ -163,6 +163,7 @@ body{
 #content{
     background: #090909;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 section#mainBG{
     position: relative;
@@ -230,6 +231,7 @@ div.firstTextBox{
 /* //EDM */
 #edm{
     display: flex;
+    min-height: 80vh;
 }
 #edm .container {
     display: flex;
@@ -238,7 +240,6 @@ div.firstTextBox{
     vertical-align: top;
     margin: 10px auto;
     padding-bottom: 3rem;
-    transform:translateX(-10rem) ;
   }
   
   .neon {
@@ -318,6 +319,7 @@ p.text{
 #gallery{
     position: relative;
     background: #090909;
+    min-height: 80vh;
 }
 .green.title{
     color: #00cc99;
@@ -332,10 +334,10 @@ p.text{
     margin: 10px auto;
 }
 #shed{
-    margin-bottom: 100vh;
+    min-height: 80vh;
 }
 #about{
-    margin-bottom: 100vh;
+    min-height: 80vh;
 }
 @media (min-width: 768px) {
     /* //laptop, tablet */
@@ -444,12 +446,17 @@ p.text{
     #galleryChange .myRows > div.myCols:hover img{
         object-fit: contain;
     }
+    #edm .container {
+        transform:translateX(-10rem) ;
+    }
 }
 @media (max-width: 768px) {
     /* //mobile */
      #sidebar {
         grid-area: 3/1/4/-1;
-    }#justforview{
+    }
+    
+    #justforview{
         display: block;
     }
     .logo{
@@ -532,7 +539,7 @@ p.text{
     }
 
     #linkCon.up{
-        transform: translateY(-150%);
+        transform: translateY(-90vh);
         position: fixed;
         background: #000;
         box-shadow: 10px 10px 80px 197px #111;
@@ -548,6 +555,7 @@ p.text{
     div.firstTextBox{
         height: 100%;
         width: 360px;
+        max-width: 85vw;
         flex-direction: column;
     }
     div.firstTextBox>div{
@@ -676,15 +684,15 @@ p.text{
 
 .front:after{
 	position: absolute;
-    top: 70%;
+    top: 65%;
     left: 0;
     z-index: 1;
     width: 100%;
-    height: 30%;
+    height: 35%;
     content: '';
     display: block;
     opacity: .6;
-    background: linear-gradient(rgba(0,0,0,0.1),rgba(53, 52, 52, 0.86));
+    background: linear-gradient(rgba(255, 255, 255, 0.1),rgba(255, 255, 255, 0.86));
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
     border-radius: 10px;

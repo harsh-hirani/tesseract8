@@ -101,96 +101,9 @@
         <div class="gold title"> Events </div>
 
         <div class="wrapper">
-  <div class="cols" id="eventCols">
-			<!--<div class="col" ontouchstart="this.classList.toggle('hover');">
-				<div class="container">
-					<div class="front" style="background-image: url(https://drive.google.com/uc?id=1LzpLxi-WZDKy6iOUKCspDY9_I_tw2xIe)">
-						<div class="inner">
-                            <p>SoM</p>
-                        </div>
-					</div>
-					<div class="back">
-						<div class="inner">
-						  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col" ontouchstart="this.classList.toggle('hover');">
-				<div class="container">
-					<div class="front" style="background-image: url(https://drive.google.com/uc?id=1ANwiBRNWIIknOu7wx_RaQ_Nw7gwavLcY)">
-						<div class="inner">
-							<p>Respawn</p>
-						</div>
-					</div>
-					<div class="back">
-						<div class="inner">
-							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col" ontouchstart="this.classList.toggle('hover');">
-				<div class="container">
-					<div class="front" style="background-image: url(https://drive.google.com/uc?id=1L-6oBZMBKx2t3ZwP68TOqoKwZGeEbYUj)">
-						<div class="inner">
-							<p>Brahmand</p>
-						</div>
-					</div>
-					<div class="back">
-						<div class="inner">
-							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col" ontouchstart="this.classList.toggle('hover');">
-				<div class="container">
-					<div class="front" style="background-image: url(https://drive.google.com/uc?id=1dwAklwYHiyLPvvDACOtBjtmTrsUxysMi">
-						<div class="inner">
-							<p>Mind-Ripple/Bulls&Bears</p>
-						</div>
-					</div>
-					<div class="back">
-						<div class="inner">
-							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col" ontouchstart="this.classList.toggle('hover');">
-				<div class="container">
-					<div class="front" style="background-image: url(https://drive.google.com/uc?id=1NRLhyw1GxfX7MffeStms6gt2mAQ-p56C)">
-						<div class="inner">
-							<p>Respawn</p>
-						</div>
-					</div>
-					<div class="back">
-						<div class="inner">
-							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit c.</p>
-						</div>
-					</div>
-				</div>
-			</div>-->
-			<div class="col" ontouchstart="this.classList.toggle('hover');">
-				<div class="container">
-					<div class="front" style="background-image: url(https://drive.google.com/uc?id=1Ntsj3YuOpLQRgorTcolHsFhMbkYAyxra)">
-						<div class="inner">
-							<p>Brahmand x Nucleus x Apogee3</p>
-						</div>
-					</div>
-					<div class="back">
-						<div class="inner">
-							<p >Brahmand x Nucleus x Apogee</p>
-                            <span style="color: gold;">Rocket Making Workshop</span>
-                            <p> 12 to 4 pm : D 204</p>
-                            <a href="#" class="myBtnDEF">Register</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
- </div>
+            <div class="cols" id="eventCols">
+            </div>
+        </div>
 
 
         </section>
@@ -232,13 +145,13 @@
             return elementBottom > viewportTop && elementTop < viewportBottom;
         };
         $("#content").scroll(function() {
-            if ($('#about').isInViewport()) {changer(5);
-            }else if ($('#shed').isInViewport()) {changer(4);
-            }else if ($('#event').isInViewport()) {changer(3);
-            }else if ($('#gallery').isInViewport()) {changer(2);
-            }else if ($('#edm').isInViewport()) {changer(1);
+            if ($('#mainBG').isInViewport()) {changer(0);
             }else if ($('#second').isInViewport()) {changer(0);
-            }else if ($('#mainBG').isInViewport()) {changer(0);
+            }else if ($('#edm').isInViewport()) {changer(1);
+            }else if ($('#gallery').isInViewport()) {changer(2);
+            }else if ($('#event').isInViewport()) {changer(3);
+            }else if ($('#shed').isInViewport()) {changer(4);
+            }else if ($('#about').isInViewport()) {changer(5);
             }
         });
         let switchcase = false;
@@ -286,50 +199,54 @@
         $eventData = [
             [
                 'BEHIND THE SCENES WITH MATHEMATICS',
-                'SOM','4 to 7 : C 004'
+                'SOM','4 to 7 : C 004',
+                '',
+                'https://drive.google.com/uc?id=1LzpLxi-WZDKy6iOUKCspDY9_I_tw2xIe'
             ],
             [
                 'Valorant Tournament (Online)',
-                'Respawn','5 to 8 : D 003'
+                'Respawn','5 to 8 : D 003',
+                '',
+                'https://drive.google.com/uc?id=1ANwiBRNWIIknOu7wx_RaQ_Nw7gwavLcY'
             ],
             [
                 'Astro Hunt',
-                'Brahmand','3 to 6 : D 008'
+                'Brahmand','3 to 6 : D 008',
+                '',
+                'https://drive.google.com/uc?id=1L-6oBZMBKx2t3ZwP68TOqoKwZGeEbYUj'
             ],
             [
                 'Quizzance with Mind Ripple',
-                'Mind-Ripple/Bulls&Bears','4 to 7 : C 002'
+                'Mind-Ripple/Bulls&Bears','4 to 7 : C 002',
+                '',
+                'https://drive.google.com/uc?id=1dwAklwYHiyLPvvDACOtBjtmTrsUxysMi'
             ],[
                 'FIFA Tournament',
-                'Respawn','5 to 8 : D 004'
+                'Respawn','5 to 8 : D 004',
+                '',
+                'https://drive.google.com/uc?id=1NRLhyw1GxfX7MffeStms6gt2mAQ-p56C'
             ],[
                 'Rocket Making workshop',
-                'Brahmand x Nucleus x Apogee3','12 to 4 PM : D 204'
+                'Brahmand x Nucleus x Apogee3','12 to 4 PM : D 204',
+                '',
+                'https://drive.google.com/uc?id=1Ntsj3YuOpLQRgorTcolHsFhMbkYAyxra'
             ]
         ];
 
         var eventHTML = '';
-        /*for (i=0;i<$eventData.length;i++){
-            eventHTML += "<div class="col" ontouchstart="this.classList.toggle('hover');">";
-				<div class="container">
-					<div class="front" style="background-image: url(https://drive.google.com/uc?id=1Ntsj3YuOpLQRgorTcolHsFhMbkYAyxra)">
-						<div class="inner">
-							<p>Brahmand x Nucleus x Apogee3</p>
-						</div>
-					</div>
-					<div class="back">
-						<div class="inner">
-							<p >Brahmand x Nucleus x Apogee</p>
-                            <span style="color: gold;">Rocket Making Workshop</span>
-                            <p> 12 to 4 pm : D 204</p>
-                            <a href="#" class="myBtnDEF">Register</a>
-						</div>
-					</div>
-				</div>
-			</div>
+        for (i=0;i<$eventData.length;i++){
+            eventHTML += "<div class=\"col\" ontouchstart=\"this.classList.toggle('hover');\">";
+			eventHTML += '	<div class="container">';
+			eventHTML += '		<div class="front" style="background-image: url('+$eventData[i][4]+'); background-color:bisque;">';
+			eventHTML += '			<div class="inner"><p>'+$eventData[i][0]+'</p></div></div><div class="back"><div class="inner">';
+			eventHTML += "				<p >"+$eventData[i][1]+"</p>";
+            eventHTML += '                <span style="color: gold;">'+$eventData[i][0]+'</span>';
+            eventHTML += '                <p>'+$eventData[i][2]+'</p>';
+            eventHTML += '                <a href="'+$eventData[i][3]+'" class="myBtnDEF">Register</a>';
+			eventHTML += "			</div></div></div></div>";
         }
         document.getElementById('eventCols').innerHTML = eventHTML;
-        *////lazy loading
+        ///lazy loading
   var lazyloadImages = document.querySelectorAll("img.lazy");       
     
     function loading() {
