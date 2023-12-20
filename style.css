@@ -554,8 +554,7 @@ p.text{
     }
     div.firstTextBox{
         height: 100%;
-        width: 360px;
-        max-width: 85vw;
+        width: clamp(80vw,350px,94vw);
         flex-direction: column;
     }
     div.firstTextBox>div{
